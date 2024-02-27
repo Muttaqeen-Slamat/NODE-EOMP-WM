@@ -168,6 +168,13 @@ try{
       timer:2000
     })
   }
+}catch(e){
+  sweet({
+    title:'Error',
+    text:'Failed to login',
+    icon:'Error',
+    timer:2000
+  })
 }
 },
     // Products
