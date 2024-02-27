@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1{
+    text-decoration: wavy underline  crimson;
+    
+}
+
+body{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+table{
+    margin: auto;
+    border: double white 5px;
+    border-radius: 5%; 
+    border-color: crimson;   
+}
+
+h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
