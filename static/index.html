@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Protest+Riot&display=swap" rel="stylesheet">
+    <title>Static</title>
+</head>
+<body>
+    <h1>
+        Static Structure
+    </h1>
+    <table>
+        <h3>
+            Home path
+        </h3>
+        <thead>
+            <th>Path</th>
+            <th>Http Methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/</td>
+                <td>Get</td>
+                <td>'Initial Home page'</td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <h3>
+            Routes information for products
+        </h3>
+        <thead>
+            <th>Path</th>
+            <th>Http Methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/products</td>
+                <td>Get</td>
+                <td>'Home page'</td>
+            </tr>
+            <tr>
+                <td>/:id</td>
+                <td>Get</td>
+                <td>'Fetching a single product by id'</td>
+            </tr>
+            <tr>
+                <td>/addProduct</td>
+                <td>Post</td>
+                <td>'adding a product'</td>
+            </tr>
+           
+        </tbody>
+    </table>
+    <table>
+        <h3>
+            Routes information for users
+        </h3>
+        <thead>
+            <th>Path</th>
+            <th>Http Methods</th>
+            <th>Description</th>
+        </thead>
+        <tr>
+            <td>/users</td>
+            <td>Get</td>
+            <td>'Fetching all the users'</td>
+        </tr>
+        <tr>
+            <td>/:id</td>
+            <td>Get</td>
+            <td>'Fetching a single user by id'</td>
+        </tr>
+        <tr>
+            <td>/register</td>
+            <td>Post</td>
+            <td>'Adding/registering a user'</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
