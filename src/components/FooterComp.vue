@@ -1,0 +1,35 @@
+<template lang="">
+    <footer id ="footerID" class="text-white py-3">
+   <div class="container">
+     <div class="row">
+       <p class="lead">
+         OTAKU OASIS &copy;
+         <span>{{currYear}}</span>
+       </p>
+     </div>
+   </div>
+ </footer>
+ </template>
+ <script>
+ export default {
+     name:'FooterComp',
+     data(){
+         return{
+             currYear:new Date().getFullYear()
+         }
+     }
+ }
+ 
+ </script>
+ <style>
+ #footerID {
+     position: absolute;
+   margin-top:570px;
+     width: 100%; /* Full width */
+     background-color: rgb(39, 142, 86);
+     z-index: 1;
+ }
+
+ 
+ 
+ </style>
