@@ -84,10 +84,24 @@
   
   <style scoped>
   .modalButton {
-    display: flex;
-    margin: auto; 
-    margin-bottom: 10px;
-    background-color: #07ff07;
-    color: black;
+    position: relative;
+    height: 52px;
+  margin-bottom: 10px;
+  margin-top: 60px;
+  background-color:rgb(39,142,86);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
   }
+
+  .modalButton:hover {
+    background-color: rgb(35, 211, 105);
+  color: white;
+  transform: translateY(-2px);
+}
   </style>

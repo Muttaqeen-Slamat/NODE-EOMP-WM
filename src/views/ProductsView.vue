@@ -15,31 +15,36 @@
                 </template>
                 <template #cardBody>
                     <img :src="product.prodImg" :alt="`${ product.prodName }`">
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="category" class="card-text text-white bg-gradient bg-success p-2">
                         Category: {{ product.prodCat }}
                     </p>
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="quantity" class="card-text text-white bg-gradient bg-success p-2">
                         Quantity: {{ product.prodQuantity }}
                     </p>
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="amount" class="card-text text-white bg-gradient bg-success p-2">
                         Amount: R{{ product.prodAmount }}
                     </p>
-                    <router-link :to="{name: 'product', params: {id: product.prodID}}">View More</router-link>
+                   
+                        <router-link class="text-white" :to="{name: 'product', params: {id: product.prodID}}"> <button id="viewMore" router-link class="text-white" :to="{name: 'product', params: {id: product.prodID}}">View More</button></router-link>
+                    
+                    
                 </template>
             </Card>
         </div>
         <div class="row" v-else>
-            <p class="lead">Loading</p>
+        <SpinnerComp></SpinnerComp>
         </div>
     </div>
 </template>
 
 <script>
 import Card from '@/components/Card.vue';
+import SpinnerComp from '@/components/SpinnerComp.vue'
 export default {
     name: 'ProductsView',
     components: {
-        Card
+        Card,
+        SpinnerComp
     },
     computed:{
         products(){
@@ -48,12 +53,43 @@ export default {
     },
     mounted() {
         this.$store.dispatch('fetchProducts')
+
     }
 }
 </script>
 
 <style scoped>
+.card-title{
+    border-radius: 12px;
+}
 img{
     width: 200px;
 }
+#category{
+    border-radius: 12px;
+}
+#quantity{
+    border-radius: 12px;
+
+}
+#amount{
+    border-radius: 12px;
+
+}
+#itemTitle{
+    border-radius: 12px;
+
+}
+#viewMore {
+    background-color: rgb(39, 142, 86);
+    border-radius: 5px;
+    width: 110px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+#viewMore:hover {
+    background-color: rgb(35, 211, 105); /* darker shade when hovered */
+}
+
 </style>

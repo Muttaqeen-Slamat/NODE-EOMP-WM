@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header">
+        <div id="cardTitle" class="card-header bg-success text-white">
             <slot name="cardHeader"></slot>
         </div>
         <div class="card-body">
@@ -20,4 +20,8 @@
         width: 18rem;
         margin: .5rem;
     }
+#cardTitle{
+    border-radius: 12px;
+}
+    
 </style>

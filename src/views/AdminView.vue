@@ -1,11 +1,11 @@
 <template>
     <div class="container">
         <div class="row">
-            <h2 class="display-4">User CRUD</h2>
+            <h2 id="userHeading" class="display-4">User CRUD</h2>
         </div>
         <AddUser :user="user" />
         <div class="row">
-            <table>
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th>User ID</th>
@@ -31,7 +31,7 @@
                         <td>{{ user.userRole }}</td>
                         <td class="d-flex justify-content-between">
                             <updateUser :user="user" />
-                            <button class="btn btn-success deleteButton"
+                            <button id="deleteUse" class="btn btn-success deleteButton"
                                 @click="event => deleteUser(user.userID)">Delete</button>
                         </td>
                     </tr>
@@ -39,14 +39,15 @@
             </table>
         </div>
         <div class="row">
-            <h2 class="display-4">Product CRUD</h2>
+            <h2 id="productHeading" class="display-4">Product CRUD</h2>
         </div>
         <AddProduct />
         <div class="row">
-            <table>
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th>Product ID</th>
+                        <th>Image</th>
                         <th>Product Name</th>
                         <th>Product Category</th>
                         <th>Product Quantity</th>
@@ -62,6 +63,9 @@
                             {{ product.prodID }}
                         </td>
                         <td>
+                            <img id="prodImg" :src="product.prodImg" alt="">
+                        </td>
+                        <td>
                             {{ product.prodName }}
                         </td>
                         <td>
@@ -75,7 +79,7 @@
                         </td>
                         <td class="d-flex justify-content-between">
                             <updateProduct :product="product"/>
-                            <button class="btn btn-success deleteButton"
+                            <button id ="deleteBut" class="btn btn-success deleteButton"
                                 @click="event => deleteProduct(product.prodID)">Delete</button>
                         </td>
                     </tr>
@@ -145,4 +149,59 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style  scoped>
+#userHeading{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+#productHeading{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+#deleteBut{
+    height: 50px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+  background-color:rgb(39,142,86);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+}
+#deleteBut:hover{
+    background-color: rgb(35, 211, 105);
+  color: white;
+  transform: translateY(-2px);
+}
+
+#deleteUse{
+    height: 50px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+  background-color:rgb(39,142,86);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+#deleteUse:hover{
+    background-color: rgb(35, 211, 105);
+  color:white;
+  transform: translateY(-2px);
+}
+
+#prodImg{
+    width:180px;
+      height:160px 
+}
+</style>

@@ -10,13 +10,13 @@
                 </template>
                 <template #cardBody>
                     <img :src="product.prodImg" :alt="`${ product.prodName }`">
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="category" class="card-text text-white bg-gradient bg-success p-2">
                         Category: {{ product.prodCat }}
                     </p>
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="quantity" class="card-text text-white bg-gradient bg-success p-2">
                         Quantity: {{ product.prodQuantity }}
                     </p>
-                    <p class="card-text text-dark bg-gradient bg-dark-subtle p-2">
+                    <p id="amount" class="card-text text-white bg-gradient bg-success p-2">
                         Amount: R{{ product.prodAmount }}
                     </p>
                 </template>
@@ -45,5 +45,17 @@ import Card from '@/components/Card.vue';
 <style scoped>
 img{
     width: 200px;
+}
+
+#category{
+    border-radius: 12px;
+}
+#quantity{
+    border-radius: 12px;
+
+}
+#amount{
+    border-radius: 12px;
+
 }
 </style>

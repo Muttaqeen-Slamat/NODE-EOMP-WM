@@ -63,7 +63,7 @@ export default {
 }
 
 #buttonHome:hover {
-    background-color: #327a4a; /* Darker green on hover */
+  background-color: rgb(35, 211, 105); /* Darker green on hover */
 }
 
 #homeCircle {
