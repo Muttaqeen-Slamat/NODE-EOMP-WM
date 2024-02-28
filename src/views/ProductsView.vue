@@ -5,7 +5,7 @@
                 <input type="text" placeholder="Search product by name" class="form-control">
             </div>
             <div class="col">
-                <button class="btn btn-success">Sorting by price</button>
+                <button class="btn btn-success" @click="toggleSort">Sorting by price</button>
             </div>
         </div>
         <div class="row" v-if="products">
@@ -46,9 +46,23 @@ export default {
         Card,
         SpinnerComp
     },
+    data() {
+        return {
+            sortAsc: true  // true for ascending, false for descending
+        };
+    },
     computed:{
         products(){
             return this.$store.state.products
+        }
+    },
+    methods: {
+        toggleSort() {
+            this.sortAsc = !this.sortAsc;
+            this.sortProducts();
+        },
+        sortProducts() {
+            this.$store.commit('sortProducts', { ascending: this.sortAsc });
         }
     },
     mounted() {

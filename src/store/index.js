@@ -27,6 +27,11 @@ product:null
     },
     setProduct(state,value){
       state.product=value
+    },
+    sortProducts(state, { ascending }) {
+      state.products.sort((a, b) => {
+          return ascending ? a.prodAmount - b.prodAmount : b.prodAmount - a.prodAmount;
+      });
     }
   },
   actions: {
