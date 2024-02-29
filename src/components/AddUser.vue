@@ -75,17 +75,18 @@
           }
         },
         methods: {
-          register(){
-            this.$store.dispatch('register', this.payload)
-            // sweet({
-            //   title:'Registration',
-            //   text: "",
-            //   icon:"success",
-            //   timer:2000
-            // })
-            window.location.reload('2000')
-          }
-        }
+  async register() {
+    try {
+      await this.$store.dispatch('register', this.payload);
+      // Optionally, show a success message here
+    } catch (error) {
+      // Handle any errors or show error messages
+      console.error(error);
+    }
+    window.location.reload();
+  }
+  
+}
     }
   </script>
   

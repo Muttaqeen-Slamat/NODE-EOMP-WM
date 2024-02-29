@@ -65,10 +65,16 @@
           }
         },
         methods: {
-          addProduct(){
-            this.$store.dispatch('addProduct', this.payload)
-            window.location.reload()
-          }
+          async addProduct() {
+    try {
+      await this.$store.dispatch('addProduct', this.payload);
+      // Optionally, show a success message here
+    } catch (error) {
+      // Handle any errors or show error messages
+      console.error(error);
+    }
+    window.location.reload();
+  }
         }
     }
   </script>

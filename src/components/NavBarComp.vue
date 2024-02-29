@@ -28,12 +28,12 @@
           </ul>
           <ul class="navbar-nav ml-auto" id="logoPos" >
                         <li class="nav-item">
-                            <a id="github"  href="https://github.com/Wareezy">
+                            <a id="github"  href="https://www.instagram.com/">
                                  <img src="https://i.ibb.co/NSsN59F/download-7.png" id="logoImg1" class="img-fluid"> 
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a id="linked" href="https://www.linkedin.com/in/warren-jaftha-b36338208">
+                            <a id="linked" href="https://www.facebook.com/?stype=lo&deoia=1&jlou=AfcKBYj8hFJWZvLRL0PdCP3sai-iT37hGvpnS6IN_8OisLq1agdMbQZmaAEF38qVK2eSLbPUUZAQOcY8AeknlEvkVfyBpqNHmDDaRvxK09bz6g&smuh=12779&lh=Ac_wDNi8huyzau9O90g">
                                 <img src="https://i.ibb.co/0Bxtk7M/download-3.png" id="logoImg2" class="img-fluid">
                             </a>
                         </li>

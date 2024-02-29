@@ -32,6 +32,9 @@
               <div class="mb-3">
                 <input type="text" class="form-control w-50 mx-auto" required="required" placeholder="Role" v-model="payload.userRole">
               </div>
+              <div class="mb-3">
+              <input type="email" class="form-control w-50 mx-auto" placeholder="Email" v-model="payload.emailAdd">
+          </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn btn-success">Update</button>
@@ -54,15 +57,22 @@
           lastName: '',
           userRole: '',
           gender: '',
-          userAge: ''
+          userAge: '',
+          emailAdd:''
         }
       }
     },
     methods: {
-      updateUser() {
-        this.$store.dispatch('updateUser', { id: this.payload.userID, data: this.payload });
-         window.location.reload()
-      }
+      async updateUser() {
+    try {
+      await this.$store.dispatch('updateUser', { id: this.payload.userID, data: this.payload } );
+      // Optionally, show a success message here
+    } catch (error) {
+      // Handle any errors or show error messages
+      console.error(error);
+    }
+    window.location.reload();
+  }
     }
   }
   </script>
