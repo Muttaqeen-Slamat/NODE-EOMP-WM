@@ -77,7 +77,7 @@
                         <td>
                             R {{ product.prodAmount }}
                         </td>
-                        <td class="d-flex justify-content-between">
+                        <td class="d-flex justify-content-between align-items-center">
                             <updateProduct :product="product"/>
                             <button id ="deleteBut" class="btn btn-success deleteButton"
                                 @click="event => deleteProduct(product.prodID)">Delete</button>
@@ -201,7 +201,7 @@ export default {
 }
 
 #prodImg{
-    width:180px;
+    width:160px;
     /* height:160px  */
     aspect-ratio: 1/1;
 }

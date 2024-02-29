@@ -1,9 +1,8 @@
-<template lang="">
-    <div>
-          <nav class="navbar navbar-expand-md navbar-dark navbar-green">
+<template>
+          <nav class="navbar navbar-expand-lg navbar-dark navbar-green">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-          <img id="logo" src="https://i.ibb.co/hHGSjsB/MW-LOGO-removebg.png" alt="Logo">
+          <img id="logo" src="https://i.ibb.co/hHGSjsB/MW-LOGO-removebg.png" alt="Logo" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-white"></span>
@@ -30,12 +29,12 @@
           <ul class="navbar-nav ml-auto" id="logoPos" >
                         <li class="nav-item">
                             <a id="github"  href="https://github.com/Wareezy">
-                                 <img src="https://i.ibb.co/NSsN59F/download-7.png" id="logoImg1" > 
+                                 <img src="https://i.ibb.co/NSsN59F/download-7.png" id="logoImg1" class="img-fluid"> 
                             </a>
                         </li>
                         <li class="nav-item">
                             <a id="linked" href="https://www.linkedin.com/in/warren-jaftha-b36338208">
-                                <img src="https://i.ibb.co/0Bxtk7M/download-3.png" id="logoImg2">
+                                <img src="https://i.ibb.co/0Bxtk7M/download-3.png" id="logoImg2" class="img-fluid">
                             </a>
                         </li>
                     </ul>
@@ -44,7 +43,7 @@
     </nav>
     
     
-        </div>
+      
     </template>
     <script>
     export default {

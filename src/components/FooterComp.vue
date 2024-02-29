@@ -1,5 +1,5 @@
 <template lang="">
-    <footer id ="footerID" class="text-white py-3">
+    <footer id ="footerID" class="text-white py-3 container-fluid">
    <div class="container">
      <div class="row">
        <p class="lead">
@@ -25,6 +25,7 @@
  #footerID {
      position: absolute;
    margin-top:570px;
+   /* margin-top: 60px; */
      width: 100%; /* Full width */
      background-color: rgb(39, 142, 86);
      z-index: 1;
