@@ -4,7 +4,7 @@
             <h2 id="userHeading" class="display-4">User CRUD</h2>
         </div>
         <AddUser :user="user" />
-        <div class="row">
+        <div class="row container">
             <table class="table table-dark">
                 <thead>
                     <tr>
@@ -63,7 +63,7 @@
                             {{ product.prodID }}
                         </td>
                         <td>
-                            <img id="prodImg" :src="product.prodImg" alt="">
+                            <img class="img-fluid" id="prodImg" :src="product.prodImg" alt="">
                         </td>
                         <td>
                             {{ product.prodName }}
@@ -202,6 +202,7 @@ export default {
 
 #prodImg{
     width:180px;
-      height:160px 
+    /* height:160px  */
+    aspect-ratio: 1/1;
 }
 </style>

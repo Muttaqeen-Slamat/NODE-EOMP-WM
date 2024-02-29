@@ -40,7 +40,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Add User</button>
+            <button type="submit" class="btn btn-success" >Add User</button>
           </div>
         </form>
       </div>
@@ -51,6 +51,7 @@
   </template>
   
   <script>
+  // import sweet from 'sweetalert'
     export default {
         name: 'AddUser',
         data(){
@@ -76,7 +77,13 @@
         methods: {
           register(){
             this.$store.dispatch('register', this.payload)
-            window.location.reload()
+            // sweet({
+            //   title:'Registration',
+            //   text: "",
+            //   icon:"success",
+            //   timer:2000
+            // })
+            window.location.reload('2000')
           }
         }
     }

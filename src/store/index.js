@@ -29,8 +29,11 @@ product:null
       state.product=value
     },
     sortProducts(state, { ascending }) {
+    // sortProducts(state ) {
       state.products.sort((a, b) => {
+          // return ? a.prodAmount - b.prodAmount : b.prodAmount - a.prodAmount;
           return ascending ? a.prodAmount - b.prodAmount : b.prodAmount - a.prodAmount;
+          // return ascending ? a.prodAmount - b.prodAmount : b.prodAmount - a.prodAmount;
       });
     }
   },
@@ -120,7 +123,7 @@ async updateUser(context, {id,data}){
     sweet({
       title:'Error',
       text:'Failed to update user',
-      icon:'Error',
+      icon:'error',
       timer:2000
     });
     console.error('error updating user:',e)
@@ -134,7 +137,7 @@ commit('setUsers');
 dispatch('fetchUsers');
 sweet({
   title:'User Deleted',
-  icon:'Success',
+  icon:'success',
   timer:2000
 })
   }
@@ -161,7 +164,7 @@ try{
     sweet({
       title:msg,
       text:`Welcome back, ${result?.firstName} ${result?.lastName}`,
-      icon:"Success",
+      icon:"success",
       timer:2000
     })
     router.push({name:'home'})
@@ -177,7 +180,7 @@ try{
   sweet({
     title:'Error',
     text:'Failed to login',
-    icon:'Error',
+    icon:'error',
     timer:2000
   })
 }
@@ -223,7 +226,7 @@ try{
         sweet({
           title:'Error',
           text:'A product was not found.',
-          icon:'Error',
+          icon:'error',
           timer:2000
         })
       }
