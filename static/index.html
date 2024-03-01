@@ -26,7 +26,7 @@
             <tr>
                 <td>/</td>
                 <td>Get</td>
-                <td>'Initial Home page'</td>
+                <td>'This static page'</td>
             </tr>
         </tbody>
     </table>
@@ -55,6 +55,16 @@
                 <td>Post</td>
                 <td>'adding a product'</td>
             </tr>
+            <tr>
+                <td>/updateProduct/:id</td>
+                <td>Patch</td>
+                <td>'updating a product'</td>
+            </tr>
+            <tr>
+                <td>/deleteProduct/:id</td>
+                <td>delete</td>
+                <td>'deleting a product'</td>
+            </tr>
            
         </tbody>
     </table>
@@ -82,6 +92,33 @@
             <td>Post</td>
             <td>'Adding/registering a user'</td>
         </tr>
+        <tr>
+            <td>/updateUser/:id</td>
+            <td>Patch</td>
+            <td>'updating a user'</td>
+        </tr>
+        <tr>
+            <td>/deleteUser/:id</td>
+            <td>Delete</td>
+            <td>'Deleting a user'</td>
+        </tr>
+    </table>
+    <table>
+        <h3>
+            Routes information for products
+        </h3>
+        <thead>
+            <th>Path</th>
+            <th>Http Methods</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/login</td>
+                <td>patch</td>
+                <td>'login via email and password'</td>
+            </tr>   
+        </tbody>
     </table>
 
 

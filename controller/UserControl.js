@@ -61,7 +61,7 @@ userRouter.delete('/delete/:id', (req, res)=>{
     
 })
 
-userRouter.post('/login/:id', bodyParser.json(), (req, res)=>{
+userRouter.post('/login', bodyParser.json(), (req, res)=>{
     try{
         users.login(req, res)
     }catch(e) {

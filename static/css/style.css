@@ -10,7 +10,7 @@
 }
 
 h1{
-    text-decoration: wavy underline  crimson;
+    text-decoration: wavy underline  rgb(39, 142, 86);
     
 }
 
@@ -25,7 +25,7 @@ table{
     margin: auto;
     border: double white 5px;
     border-radius: 5%; 
-    border-color: crimson;   
+    border-color: rgb(39, 142, 86);   
 }
 
 h3{
