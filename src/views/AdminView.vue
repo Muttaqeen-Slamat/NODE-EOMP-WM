@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div>
-        <h2 id="userHeading" class="display-4 mt-4 mb-4">User</h2>
+        <h2 id="userHeading" class="display-4 mt-4 mb-4">USER</h2>
       </div>
       <AddUser :user="user" />
   
@@ -47,7 +47,7 @@
   
       <div class="mt-4">
         <div class="row">
-          <h2 id="productHeading" class="display-4 mb-4">Product</h2>
+          <h2 id="productHeading" class="display-4 mb-4">PRODUCTS</h2>
         </div>
         <AddProduct />
   

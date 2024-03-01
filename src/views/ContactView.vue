@@ -6,7 +6,7 @@
   <div id="contactInfo" class="container-fluid">
     <section id="cont">
       <div class="content">
-        <h2 id="headingContact" class="mt-4 mb-4">Contact Us</h2>
+        <h2 id="headingContact" class="display-4 mt-4 mb-4">CONTACT US</h2>
         <p id="contactPara">
           We're delighted that you're here. Whether you have questions,
           suggestions, or just want to say hello, we're ready to listen. Your

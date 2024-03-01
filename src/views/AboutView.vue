@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div>
-          <h1 id="aboutHeading" class="display-4 text-center">ABOUT</h1>
+          <h2 id="aboutHeading" class="display-4 mt-4 mb-4 text-center">ABOUT</h2>
         </div>
         <div>
           <h5 id="aboutHeading2" class="display-7">What is our business goal</h5>

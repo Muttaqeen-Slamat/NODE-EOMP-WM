@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <h2 class="display-4 mt-4 mb-4">Product Details</h2>
+            <h2 class="display-4 mt-4 mb-4">PRODUCT DETAIL</h2>
         </div>
         <div class="row d-flex justify-content-center">
             <Card v-if="product">
