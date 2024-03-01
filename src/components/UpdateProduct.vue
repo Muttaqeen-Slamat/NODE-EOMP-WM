@@ -44,7 +44,7 @@
 </template>
 
 <script>
-  // import Swal from 'sweetalert2';
+  import Swal from 'sweetalert2';
 export default {
   name: 'UpdateProduct',
   data() {
@@ -60,45 +60,45 @@ export default {
     }
   },
   methods: {
-    async updateProduct() {
-  try {
-    await this.$store.dispatch('updateProduct', { id: this.payload.prodID, data: this.payload } );
-    // Optionally, show a success message here
-  } catch (error) {
-    // Handle any errors or show error messages
-    console.error(error);
-  }
-  window.location.reload();
-}
-// async updateProduct() {
+//     async updateProduct() {
 //   try {
 //     await this.$store.dispatch('updateProduct', { id: this.payload.prodID, data: this.payload } );
-//     Swal.fire({
-//           title: 'Update Successful',
-//           text: 'User has been updated successfully!',
-//           icon: 'success',
-//           timer: 2000,
-//           showConfirmButton: false
-//         });
-
-//         setTimeout(() => {
-//           window.location.reload();
-//         }, 3000);
-
+//     // Optionally, show a success message here
 //   } catch (error) {
+//     // Handle any errors or show error messages
 //     console.error(error);
-//     Swal.fire({
-//           title: 'Error',
-//           text: 'Failed to update user',
-//           icon: 'error',
-//           timer: 2000
-//         });
-        
-//         setTimeout(() => {
-//           window.location.reload();
-//         }, 3000);
 //   }
+//   window.location.reload();
 // }
+async updateProduct() {
+  try {
+    await this.$store.dispatch('updateProduct', { id: this.payload.prodID, data: this.payload } );
+    Swal.fire({
+          title: 'Update Successful',
+          text: 'User has been updated successfully!',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false
+        });
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+
+  } catch (error) {
+    console.error(error);
+    Swal.fire({
+          title: 'Error',
+          text: 'Failed to update user',
+          icon: 'error',
+          timer: 2000
+        });
+        
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+  }
+}
   }
 }
 </script>
