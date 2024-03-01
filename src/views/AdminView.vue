@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div>
-        <h2 id="userHeading" class="display-4 mt-5 mb-4">User</h2>
+        <h2 id="userHeading" class="display-4 mt-4 mb-4">User</h2>
       </div>
       <AddUser :user="user" />
   
@@ -45,7 +45,7 @@
         </div>
       </div>
   
-      <div class="mt-5">
+      <div class="mt-4">
         <div class="row">
           <h2 id="productHeading" class="display-4 mb-4">Product</h2>
         </div>
@@ -223,5 +223,9 @@
     width: 160px;
     /* height:160px  */
     aspect-ratio: 1/1;
+  }
+
+  table{
+    border: solid  rgb(39, 142, 86);
   }
   </style>

@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <div>
+            <h2 class="display-4 mt-4 mb-4">Products</h2>
+        </div>
         <div class="row">
             <div class="col">
                 <input type="text" id="search" v-model="searchItem" placeholder="Search product by name" class="form-control">
@@ -11,7 +14,7 @@
                 <button class="btn btn-success" id="sort" @click="toggleSort">Sorting by price</button>
             </div>
         </div>
-        <div class="row" v-if="products">
+        <div class="row d-flex justify-content-center gap-5" v-if="products">
             <Card v-for="product in filteredProducts" :key="product.prodID">
                 <template #cardHeader>
                     <h4 class="card-title">{{ product.prodName }}</h4>
@@ -109,17 +112,20 @@ export default {
 #search{
     margin-top:100px;
     margin-bottom:100px;
-    width:190px;
+    /* width:190px; */
+    /* width: auto; */
 }
 #filter{
     margin-top:100px;
     margin-bottom:100px;
-    width:190px;
+    /* width:190px; */
+    /* width: auto; */
 }
 #sort{
     margin-top:100px;
     margin-bottom:100px;
-    width:190px;
+    /* width:190px; */
+    /* width: auto; */
 }
 #productImage{
     height:200px;
@@ -148,6 +154,12 @@ img {
     transition: background-color 0.3s ease;
 }
 #viewMore:hover {
+    background-color: rgb(35, 211, 105);
+}
+#filter:hover {
+    background-color: rgb(35, 211, 105);
+}
+#sort:hover {
     background-color: rgb(35, 211, 105);
 }
 </style>

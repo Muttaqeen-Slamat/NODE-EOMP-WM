@@ -37,7 +37,7 @@
           </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-success">Update</button>
+                <button type="submit" class="btn btn-success" @click="(event) => updateUser(userID)">Update</button>
               </div>
             </form>
           </div>
@@ -47,6 +47,7 @@
   </template>
   
   <script>
+  import Swal from 'sweetalert2';
   export default {
     name: 'UpdateUser',
     data() {
@@ -62,18 +63,39 @@
         }
       }
     },
+    
     methods: {
-      async updateUser() {
-    try {
-      await this.$store.dispatch('updateUser', { id: this.payload.userID, data: this.payload } );
-      // Optionally, show a success message here
-    } catch (error) {
-      // Handle any errors or show error messages
-      console.error(error);
+    async updateUser() {
+      try {
+        await this.$store.dispatch('updateUser', { id: this.payload.userID, data: this.payload });
+        Swal.fire({
+          title: 'Update Successful',
+          text: 'User has been updated successfully!',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false
+        });
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+
+      } catch (error) {
+        console.error(error);
+        Swal.fire({
+          title: 'Error',
+          text: 'Failed to update user',
+          icon: 'error',
+          timer: 2000
+        });
+        
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      }
+      // window.location.reload();
     }
-    window.location.reload();
   }
-    }
   }
   </script>
   

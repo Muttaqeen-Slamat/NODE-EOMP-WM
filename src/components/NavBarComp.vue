@@ -1,5 +1,5 @@
 <template>
-          <nav class="navbar navbar-expand-lg navbar-dark navbar-green">
+          <nav class="navbar navbar-expand-lg navbar-dark navbar-green sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
           <img id="logo" src="https://i.ibb.co/hHGSjsB/MW-LOGO-removebg.png" alt="Logo" class="img-fluid">

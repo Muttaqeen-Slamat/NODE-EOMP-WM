@@ -1,6 +1,6 @@
 <template>
     <div class="card" :class="{ 'hovered': isHovered }" @mouseover="toggleHover(true)" @mouseleave="toggleHover(false)">
-        <div id="cardTitle" class="card-header bg-success text-white">
+        <div id="cardTitle" class="card-header bg-success text-white mt-3">
             <slot name="cardHeader"></slot>
         </div>
         <div class="card-body">
