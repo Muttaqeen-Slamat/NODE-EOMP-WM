@@ -18,7 +18,7 @@
           <p>Our business vision is to empower other developers and to inspire them. To show others that if they want to start their own business from the ground up then they could even if they have no assistance.</p>
         </div>
       </div>
-      <div class="col-md-6 order-md-2 d-flex justify-content-center align-items-center">
+      <div class="col-md-6 order-md-2 d-flex justify-content-center">
         <div class="text-center">
           <img id="homeGirl" src="https://i.ibb.co/q5KNX7N/animegirl-removebg-preview.png" class="img-fluid bigger-image">
         </div>
@@ -26,16 +26,17 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
 }
 </script>
-
 <style>
 .bigger-image {
   max-width: 100%; /* Ensure the image is always responsive */
   height: auto; /* Automatically adjust the height based on the width */
   max-height: 400px; /* Set a maximum height for the image */
+  position: absolute;
+  left: 50%; /* Move the image 50% to the left */
+  transform: translateX(-50%); /* Translate the image -50% of its own width to the left to center it */
 }
 </style>
