@@ -73,7 +73,7 @@
         </div>
         <div class="col">
           <div class="contactForm">
-          <form id="formOfContact" action="https://formspree.io/f/mpzvrdre" method="POST">
+          <form id="formOfContact" action="https://formspree.io/f/mpzvrdre" method="POST" ref="form" @submit.prevent="submitForm">
             <h2>Send Message</h2>
             <div class="inputBox">
               <!-- validation is included by each field with a error message that gets displayed -->
@@ -92,13 +92,13 @@
             </div>
             <div class="inputBox">
               <!-- validation is included by each field with a error message that gets displayed -->
-              <input type="email" name="email" placeholder="Email" required="required" data-sendingEmail />
+              <input type="email" name="email" placeholder="Email" v-model="email" data-sendingEmail />
               <!-- <span>Email</span> -->
             </div>
 
             <div class="inputBox">
               <!-- validation is included by each field with a error message that gets displayed -->
-              <textarea required="required" placeholder="Type your message" name="message" data-sendingMessage></textarea>
+              <textarea required="required" placeholder="Type your message" name="message" v-model="message" data-sendingMessage></textarea>
               <!-- <span>Type your message...</span> -->
             </div>
 
@@ -119,11 +119,26 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      email: "",
+      message: "",
+    };
+  },
   mounted() {
     // Call the initializeForm method when the component is mounted
     this.initializeForm();
   },
   methods: {
+    submitForm() {
+      if (!this.email.trim() || !this.message.trim()) {
+        alert(
+          "It seems you have not filled in the required text areas to send a message. Please enter your email and your message for it to be valid. Thank you."
+        );
+        return;
+      }
+      this.$refs.form.submit();
+    },
     initializeForm() {
       // declaring the button that will be used to send the data to form spree
       let sendingButton = document.querySelector("[sendingButton]");
