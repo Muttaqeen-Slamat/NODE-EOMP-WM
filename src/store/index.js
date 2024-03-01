@@ -45,23 +45,23 @@ async register(context,payload){
     let{msg}=(await axios.post(`${lifeURL}users/register`,payload))
     if(msg){
       context.dispatch('setUser')
-      sweet({
-        title:'Registration',
-        text:msg,
-        icon:"success",
-        timer:2000
-      })
+      // sweet({
+      //   title:'Registration',
+      //   text:msg,
+      //   icon:"success",
+      //   timer:2000
+      // })
 
     }
   }catch(e){
-    sweet(
-      {
-        title:'Error',
-        text:'Please try again later',
-        icon:"error",
-        timer:2000
-      }
-    )
+    // sweet(
+    //   {
+    //     title:'Error',
+    //     text:'Please try again later',
+    //     icon:"error",
+    //     timer:2000
+    //   }
+    // )
   }
 },
 
@@ -237,22 +237,22 @@ try{
         let {msg}=(await axios.post(`${lifeURL}products/addProduct`,payload))
         if(msg){
           context.dispatch('setProducts')
-          sweet(
-            {
-              title:'Registration',
-              text:msg,
-              icon:"success",
-              timer:2000
-            }
-          )
+          // sweet(
+          //   {
+          //     title:'Registration',
+          //     text:msg,
+          //     icon:"success",
+          //     timer:2000
+          //   }
+          // )
         }
       }catch(e){
-        sweet({
-          title:'Error',
-          text:'Please try again later',
-          icon:"error",
-          timer:2000
-        })
+        // sweet({
+        //   title:'Error',
+        //   text:'Please try again later',
+        //   icon:"error",
+        //   timer:2000
+        // })
       }
     },
     async deleteProduct({commit,dispatch},payload)

@@ -45,6 +45,7 @@
   </template>
   
   <script>
+  import Swal from 'sweetalert2'
     export default {
         name: 'AddProduct',
         data(){
@@ -52,7 +53,7 @@
             payload: {
               prodID: '',
               prodName:'',
-              prodImg: '',
+              prodImg: 'https://i.ibb.co/9nbYmVZ/tshirt5.jpg',
               prodCat: '',
               prodQuantity:'',
               prodAmount:''
@@ -65,16 +66,45 @@
           }
         },
         methods: {
-          async addProduct() {
-    try {
-      await this.$store.dispatch('addProduct', this.payload);
-      // Optionally, show a success message here
-    } catch (error) {
-      // Handle any errors or show error messages
-      console.error(error);
-    }
-    window.location.reload();
+  //         async addProduct() {
+  //   try {
+  //     await this.$store.dispatch('addProduct', this.payload);
+  //     // Optionally, show a success message here
+  //   } catch (error) {
+  //     // Handle any errors or show error messages
+  //     console.error(error);
+  //   }
+  //   window.location.reload();
+  // }
+  async addProduct() {
+  try {
+    await this.$store.dispatch('addProduct', this.payload );
+    Swal.fire({
+          title: 'Added Successful',
+          text: 'Product has been added successfully!',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false
+        });
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+
+  } catch (error) {
+    console.error(error);
+    Swal.fire({
+          title: 'Error',
+          text: 'Failed to add user',
+          icon: 'error',
+          timer: 2000
+        });
+        
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
   }
+}
         }
     }
   </script>
