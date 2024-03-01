@@ -17,10 +17,10 @@
               <router-link class="nav-link text-white" to="/about">About</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/products">Products</router-link>
+              <router-link class="nav-link text-white" to="/admin">Admin</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/admin">Admin</router-link>
+              <router-link class="nav-link text-white" to="/products">Products</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link text-white" to="/contact">Contact</router-link>
